@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt();   // Number of test cases
+
+        while (T-- > 0) {
+            int N = sc.nextInt();
+
+            int minEntertainment;
+            int maxEntertainment;
+
+            if (N == 2) {
+                minEntertainment = 0;
+                maxEntertainment = 0;
+            } else {
+                minEntertainment = N - 2;
+                maxEntertainment = (N - 1) * (N - 2) / 2;
+            }
+
+            System.out.println(minEntertainment + " " + maxEntertainment);
+        }
+        sc.close();
+    }
+}
